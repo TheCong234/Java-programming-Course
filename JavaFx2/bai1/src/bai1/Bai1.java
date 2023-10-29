@@ -117,7 +117,6 @@ public class Bai1 extends Application {
                     alertFinishedDelete.setContentText("Da xoa thanh cong.");
                     alertFinishedDelete.showAndWait();
                 }
-                
             } catch (SQLException ex) {
                 Logger.getLogger(Bai1.class.getName()).log(Level.SEVERE, null, ex);
             }
