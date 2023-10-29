@@ -1,0 +1,8 @@
+create table Staff (
+	id char(6) not null,
+	lastName varchar(20),
+	firstName varchar(10),
+	gender char(1),
+	phone varchar(10),
+	primary key (id)
+);
