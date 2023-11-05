@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Bai 2 Chuong 4</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Họ lót: "/>
+                <h:inputText id="txtLastName" value="#{submit.lastName}"/>
+                <h:outputLabel value="Tên: "/>
+                <h:inputText id="txtFirstName" value="#{submit.firstName}"/>
+                <h:outputLabel value="Ngày sinh: "/>
+                <h:inputText id="txtBirthDay" value="#{submit.dateOfBirthDay}"/>
+                <h:outputLabel value="Giới tính"/>
+                <h:selectOneRadio id="radGender" value="#{submit.gender}">
+                    <f:selectItem itemValue="male" itemLabel="Nam"/>
+                    <f:selectItem itemValue="Nữ" itemLabel="Nữ"/>
+                </h:selectOneRadio>
+            </h:panelGrid>
+            <h:panelGrid columns="1">
+                <h:outputText value="Chọn ngôn ngữ lập trình:"/>
+                <h:selectManyCheckbox id="chkLanguages" value="#{submit.language}">
+                    <f:selectItem itemValue="C/C++"/>
+                    <f:selectItem itemValue="C#"/>
+                    <f:selectItem itemValue="Java"/>
+                    <f:selectItem itemValue="Python"/>
+                    <f:selectItem itemValue="PHP"/>
+                </h:selectManyCheckbox>
+                <h:outputText value="Ý kiến khác:"/>
+                <h:inputTextarea id="txtAnotherSelect" rows="4" cols="40" value="#{submit.reason}"/>
+                <h:commandButton value="Đồng ý" style="background-color: lightblue;color: white"/>
+                <h:outputText escape="false" value="#{submit.response}"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>

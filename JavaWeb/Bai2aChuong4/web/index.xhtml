@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Bài 2 Chương 4</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Taxable Income:"/>
+                <h:inputText id="txtTaxable" value="#{bai2.taxable}" 
+                             required="true" requiredMessage="Xin nhập trường này." 
+                             onkeypress="if(event.which &lt; 48 || event.which &gt; 57) return false;"/>
+                <h:outputText value="Filing Status:"/>
+                <h:selectOneMenu id="selFiling" value="#{bai2.filing}">
+                    <f:selectItem itemValue="Single" itemLabel="Single"/>
+                    <f:selectItem itemValue="Married" itemLabel="Married"/>
+                </h:selectOneMenu>
+                <h:commandButton value="Compute Tax"/>
+            </h:panelGrid>
+        </h:form>
+        <h:outputText escape="false" value="#{bai2.result}" style="color: red"/>
+    </h:body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Ket Qua</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid>
+                <h:outputText value="#{bai3.num1} + #{bai3.num2} = #{bai3.input1} ::: #{bai3.layAns1()}"/>
+                <h:outputText value="#{bai3.num3} + #{bai3.num4} = #{bai3.input2} ::: #{bai3.layAns2()}"/>
+                <h:outputText value="#{bai3.num5} + #{bai3.num6} = #{bai3.input3} ::: #{bai3.layAns3()}"/>
+                <h:outputText value="#{bai3.num7} + #{bai3.num8} = #{bai3.input4} ::: #{bai3.layAns4()}"/>
+                <h:outputText value="#{bai3.num9} + #{bai3.num10} = #{bai3.input5} ::: #{bai3.layAns5()}"/>
+                <h:commandButton value="Home" action="index"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>

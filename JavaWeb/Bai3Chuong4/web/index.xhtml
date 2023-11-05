@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Bài 3 Chương 4</title>
+    </h:head>
+    <h:body>
+        <h:form id="caculatorForm">
+            <h:panelGrid columns="2">
+                <h:outputText value="#{bai3.num1} + #{bai3.num2} = "/>
+                <h:inputText id="txt1" value="#{bai3.input1}"/>
+                <h:outputText value="#{bai3.num3} + #{bai3.num4} = "/>
+                <h:inputText id="txt2" value="#{bai3.input2}"/>
+                <h:outputText value="#{bai3.num5} + #{bai3.num6} = "/>
+                <h:inputText id="txt3" value="#{bai3.input3}"/>
+                <h:outputText value="#{bai3.num7} + #{bai3.num8} = "/>
+                <h:inputText id="txt4" value="#{bai3.input4}"/>
+                <h:outputText value="#{bai3.num9} + #{bai3.num10} = "/>
+                <h:inputText id="txt5" value="#{bai3.input5}"/>
+                <h:commandButton value="Xem kq" action="result"/>
+                <h:commandButton value="Bai moi" action="#{bai3.reloadPage()}"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
