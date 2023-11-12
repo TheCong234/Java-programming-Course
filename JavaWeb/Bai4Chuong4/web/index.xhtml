@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div>
+                <h:outputText value="Chọn lớp học: "/>
+                <h:selectOneMenu value="#{bai4.slTenLop}">
+                    <f:selectItems value="#{bai4.tenLop}"/>
+                </h:selectOneMenu>
+                <h:commandButton value="Query"/>
+            </div>
+            <div>
+                <h:dataTable value="#{bai4.sinhVien}" var="sv" border="1" cellspacing="0" cellpadding="5">
+                    <h:column>
+                        <f:facet name="header">MSSV</f:facet>
+                        #{sv.MSSV}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">HO</f:facet>
+                        #{sv.Ho}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">TEN</f:facet>
+                        #{sv.Ten}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">NGAYSINH</f:facet>
+                        #{sv.NgaySinh}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">GIOITINH</f:facet>
+                        #{sv.GioiTinh}
+                    </h:column>
+                </h:dataTable>
+            </div>
+        </h:form>
+    </h:body>
+</html>
